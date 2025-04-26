@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensures content flows vertically */
+    align-items: center;
+    justify-content: flex-start; /* Aligns content from the top */
+}
+
+/* Background for Index Page */
+.index-page {
+    background: url("/static/images/animated pharmacy.gif") no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+/* Background for Login Page */
+.login-page {
+    background: url("../images/animated pharmacy.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Background for Buy Page */
+.buy-page {
+    background: url("../images/pills.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Background for Vendor Restock Page */
+.vendor-restock-page {
+    background: url("../images/pills.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Background for Customer Home Page */
+.customer-home-page {
+    background: url("../images/animated pharmacy.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Background for Customer Register Page */
+.customer-register-page {
+    background: url("../images/animated pharmacy.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Background for Vendor Home Page */
+.vendor-home-page {
+    background: url("../images/animated pharmacy.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Background for Vendor Register Page */
+.vendor-register-page {
+    background: url("../images/animated pharmacy.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Welcome Box - Centered */
+.welcome-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Buttons inside Welcome Box */
+.welcome-container button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.welcome-container button:hover {
+    background: #0056b3;
+}
+
+/* "Available Items" Header */
+.available-items-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto 10px; /* Adjusted margin for proper spacing */
+    text-transform: uppercase;
+}
+
+/* Centering the Medicine Container */
+.medicine-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 10px;
+}
+
+/* Medicine Card Styling */
+.medicine-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medicine-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.medicine-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Restock Button */
+.restock-btn {
+    background: #28a745;
+}
+
+.restock-btn:hover {
+    background: #218838;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .medicine-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medicine-card {
+        width: 90%;
+    }
+
+    .welcome-container {
+        width: 90%;
+    }
+}

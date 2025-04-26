@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Medicines</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body class="buy-page"> <!-- Background class for styling -->
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="available-items-header">Available Items</h1>
+    </header>
+
+    <!-- Cart Button -->
+    <div style="text-align: center; margin: 20px;">
+        <a href="{{ url_for('view_cart') }}">
+            <button>🛒 View Cart</button>
+        </a>
+    </div>
+
+    <!-- Medicine List -->
+    <div class="medicine-container">
+
+        <!-- Paracetamol -->
+        <div class="medicine-card">
+            <h2>Paracetamol</h2>
+            <p><strong>ID:</strong> Para2024</p>
+            <p><strong>Manufacturer:</strong> Cipla</p>
+            <p><strong>Stock:</strong> 150</p>
+            <p><strong>Mfg Date:</strong> 2024-01-10</p>
+            <p><strong>Exp Date:</strong> 2026-06-15</p>
+            <p><strong>Price:</strong> ₹30</p>
+            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                <input type="hidden" name="medicine_id" value="Para2024">
+                <input type="hidden" name="medicine_name" value="Paracetamol">
+                <input type="number" name="quantity" placeholder="Enter Quantity" min="1" required>
+                <button type="submit" class="buy-btn">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Ibuprofen -->
+        <div class="medicine-card">
+            <h2>Ibuprofen</h2>
+            <p><strong>ID:</strong> Ibu2023</p>
+            <p><strong>Manufacturer:</strong> Sun Pharma</p>
+            <p><strong>Stock:</strong> 80</p>
+            <p><strong>Mfg Date:</strong> 2023-06-20</p>
+            <p><strong>Exp Date:</strong> 2025-12-30</p>
+            <p><strong>Price:</strong> ₹50</p>
+            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                <input type="hidden" name="medicine_id" value="Ibu2023">
+                <input type="hidden" name="medicine_name" value="Ibuprofen">
+                <input type="number" name="quantity" placeholder="Enter Quantity" min="1" required>
+                <button type="submit" class="buy-btn">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Amoxicillin -->
+        <div class="medicine-card">
+            <h2>Amoxicillin</h2>
+            <p><strong>ID:</strong> Amox2024</p>
+            <p><strong>Manufacturer:</strong> Dr. Reddy’s</p>
+            <p><strong>Stock:</strong> 100</p>
+            <p><strong>Mfg Date:</strong> 2024-02-05</p>
+            <p><strong>Exp Date:</strong> 2026-07-20</p>
+            <p><strong>Price:</strong> ₹70</p>
+            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                <input type="hidden" name="medicine_id" value="Amox2024">
+                <input type="hidden" name="medicine_name" value="Amoxicillin">
+                <input type="number" name="quantity" placeholder="Enter Quantity" min="1" required>
+                <button type="submit" class="buy-btn">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Cetirizine -->
+        <div class="medicine-card">
+            <h2>Cetirizine</h2>
+            <p><strong>ID:</strong> Ceti2023</p>
+            <p><strong>Manufacturer:</strong> Zydus Cadila</p>
+            <p><strong>Stock:</strong> 120</p>
+            <p><strong>Mfg Date:</strong> 2023-09-12</p>
+            <p><strong>Exp Date:</strong> 2025-11-05</p>
+            <p><strong>Price:</strong> ₹40</p>
+            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                <input type="hidden" name="medicine_id" value="Ceti2023">
+                <input type="hidden" name="medicine_name" value="Cetirizine">
+                <input type="number" name="quantity" placeholder="Enter Quantity" min="1" required>
+                <button type="submit" class="buy-btn">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Azithromycin -->
+        <div class="medicine-card">
+            <h2>Azithromycin</h2>
+            <p><strong>ID:</strong> Azithro2024</p>
+            <p><strong>Manufacturer:</strong> Glenmark</p>
+            <p><strong>Stock:</strong> 60</p>
+            <p><strong>Mfg Date:</strong> 2024-03-15</p>
+            <p><strong>Exp Date:</strong> 2026-08-10</p>
+            <p><strong>Price:</strong> ₹90</p>
+            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                <input type="hidden" name="medicine_id" value="Azithro2024">
+                <input type="hidden" name="medicine_name" value="Azithromycin">
+                <input type="number" name="quantity" placeholder="Enter Quantity" min="1" required>
+                <button type="submit" class="buy-btn">Add to Cart</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

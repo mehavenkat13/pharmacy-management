@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body.cart-page {
+            background: url('{{ url_for('static', filename='images/pills.gif') }}') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 2px solid #007bff;
+        }
+        .cart-list {
+            list-style: none;
+            padding: 0;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .cart-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            font-size: 17px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="cart-page">
+
+    <header class="header">
+        <h1>Your Cart</h1>
+    </header>
+
+    {% if cart %}
+        <ul class="cart-list">
+            {% for item in cart %}
+                <li class="cart-item">
+                    <strong>Medicine Name:</strong> {{ item.name }} |
+                    <strong>ID:</strong> {{ item.id }} |
+                    <strong>Quantity:</strong> {{ item.quantity }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p style="text-align: center; font-size: 18px;">🛒 Your cart is empty.</p>
+    {% endif %}
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="{{ url_for('buy') }}">
+            <button>← Back to Buy Page</button>
+        </a>
+    </div>
+
+</body>
+</html>
